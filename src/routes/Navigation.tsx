@@ -5,6 +5,8 @@ import {
   NavLink
 } from 'react-router-dom';
 
+import {RegisterPage, FormikBasicPage, FormikYupPage, FormikComponents, FormikAbstraction }  from '../03-forms/pages';
+
 import logo from '../logo.svg';
 
 export const Navigation = () => {
@@ -15,13 +17,19 @@ export const Navigation = () => {
             <img src={ logo } alt="React Logo" />
           <ul>
             <li>
-              <NavLink to="/" activeClassName="nav-active" exact>Home</NavLink>
+              <NavLink to="/register" activeClassName="nav-active" exact>Register</NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="nav-active" exact>About</NavLink>
+              <NavLink to="/formik-basic" activeClassName="nav-active" exact>Formik Basics</NavLink>
             </li>
             <li>
-              <NavLink to="/users" activeClassName="nav-active" exact>Users</NavLink>
+              <NavLink to="/formik-yup" activeClassName="nav-active" exact>Formik Yup</NavLink>
+            </li>
+            <li>
+              <NavLink to="/formik-components" activeClassName="nav-active" exact>Formik Components</NavLink>
+            </li>
+            <li>
+              <NavLink to="/formik-abstraction" activeClassName="nav-active" exact>Formik Abstraction</NavLink>
             </li>
           </ul>
         </nav>
@@ -29,14 +37,20 @@ export const Navigation = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <h1>About</h1>
+          <Route path="/register">
+            <RegisterPage />
           </Route>
-          <Route path="/users">
-            <h1>Users</h1>
+          <Route path="/formik-basic">
+            <FormikBasicPage />
           </Route>
-          <Route path="/">
-            <h1>Home</h1>
+          <Route path="/formik-yup">
+            <FormikYupPage />
+          </Route>
+          <Route path="/formik-components">
+            <FormikComponents />
+          </Route>
+          <Route path="/formik-abstraction">
+            <FormikAbstraction />
           </Route>
         </Switch>
       </div>
