@@ -1,0 +1,73 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Brian",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "min",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Zaragoza",
+    "label": "Apellido",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "min",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Email",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "Dark Souls"
+      },
+     {
+       "id": 2,
+       "label": "Hollow Knight"
+     }, 
+     {
+       "id": 3,
+       "label": "Resident Evil"
+     }],
+     "validations": [
+       {
+         "type": "required"
+       }
+     ]
+  }
+]
